@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator"
 import { motion } from "framer-motion"
 
 import { Shield, Target, Users, Zap, Book, Award, Check } from "lucide-react"
-import Image from "next/image"
+
 import HeroSection from "./components/HeroSection"
 import Link from "next/link"
 
@@ -29,7 +29,7 @@ export default function Home() {
           >
             <h2 className="text-3xl font-bold leading-[1.1] sm:text-3xl md:text-5xl">Comprehensive SSB Training</h2>
             <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              Our programs cover all aspects of SSB selection, ensuring you're fully prepared for the challenges ahead.
+              Our programs cover all aspects of SSB selection, ensuring you&apos;re fully prepared for the challenges ahead.
             </p>
           </motion.div>
           <div className="mx-auto grid gap-8 sm:max-w-3xl sm:grid-cols-2 lg:max-w-5xl lg:grid-cols-3">
@@ -88,7 +88,7 @@ export default function Home() {
               <h3 className="text-3xl font-semibold ">Immersive Learning Experience</h3>
               <p className="text-gray-300 leading-relaxed">
                 Our training programs utilize advanced simulation techniques and real-world scenarios to provide an
-                immersive learning experience. This approach ensures that you're not just memorizing information but
+                immersive learning experience. This approach ensures that you&apos;re not just memorizing information but
                 developing critical thinking and decision-making skills necessary for success in the SSB selection process.
               </p>
               <ul className="space-y-3">

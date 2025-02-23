@@ -1,5 +1,10 @@
 import type { LightbulbIcon as LucideProps } from "lucide-react"
 
+interface LucideProps {
+  size?: number
+  strokeWidth?: number
+  className?: string
+}
 export function Zap(props: LucideProps) {
   return (
     <svg

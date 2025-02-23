@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { SiteHeader } from "../components/site-header"
-import { Footer } from "../components/footer"
+
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -90,7 +90,7 @@ export default function Register() {
           </motion.div>
         </section>
       </main>
-      <Footer />
+     
     </div>
   )
 }

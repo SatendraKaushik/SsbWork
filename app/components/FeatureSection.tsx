@@ -11,7 +11,11 @@ const features = [
   { icon: Cpu, title: "Advanced Automation", description: "Automate tasks with powerful workflows" },
   { icon: Globe, title: "Global Scaling", description: "Scale your bots to millions of users effortlessly" },
 ]
-
+interface FeatureCardProps {
+  icon: React.ElementType;
+  title: string;
+  description: string;
+}
 export default function FeatureSection() {
   return (
     <motion.section
@@ -37,7 +41,7 @@ export default function FeatureSection() {
   )
 }
 
-function FeatureCard({ icon: Icon, title, description }) {
+function FeatureCard({ icon: Icon, title, description }:FeatureCardProps) {
   return (
     <motion.div
       whileHover={{ scale: 1.05, rotateY: 5 }}
