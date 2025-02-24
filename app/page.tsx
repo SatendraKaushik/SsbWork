@@ -126,52 +126,53 @@ export default function Home() {
 
         <Separator className="my-12" />
 
-        <section id="pricing" className="container px-32 py-12 md:py-24 lg:py-32">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center"
-          >
-            <h2 className="text-3xl font-bold leading-[1.1] sm:text-3xl md:text-5xl">Training Course Pricing</h2>
-            <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              Choose the training package that best fits your preparation needs and goals.
-            </p>
-          </motion.div>
-          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {pricingPlans.map((plan, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex flex-col overflow-hidden rounded-lg border bg-background"
-              >
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold">{plan.name}</h3>
-                  <div className="mt-4 flex items-baseline text-3xl font-bold">
-                    ₹{plan.price.toLocaleString()}
-                    <span className="ml-1 text-xl font-normal text-muted-foreground">{plan.duration}</span>
-                  </div>
-                  <p className="mt-4 text-muted-foreground">{plan.description}</p>
-                </div>
-                <div className="flex flex-1 flex-col justify-between p-6">
-                  <ul className="space-y-4">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start">
-                        <Check className="mr-2 h-5 w-5 text-primary" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button className="mt-8 w-full">{plan.buttonText}</Button>
-                </div>
-              </motion.div>
-            ))}
+        <section id="pricing" className="container px-4 sm:px-6 md:px-8 lg:px-12 py-8 md:py-12 lg:py-16">
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5 }}
+    className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center"
+  >
+    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">Training Course Pricing</h2>
+    <p className="max-w-[90%] sm:max-w-[85%] text-base sm:text-lg leading-normal text-muted-foreground">
+      Choose the training package that best fits your preparation needs and goals.
+    </p>
+  </motion.div>
+  
+  <div className="mt-8 sm:mt-10 md:mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+    {pricingPlans.map((plan, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        className="flex flex-col overflow-hidden rounded-lg border bg-background"
+      >
+        <div className="p-4 sm:p-6">
+          <h3 className="text-xl sm:text-2xl font-bold">{plan.name}</h3>
+          <div className="mt-3 sm:mt-4 flex items-baseline text-2xl sm:text-3xl font-bold">
+            ₹{plan.price.toLocaleString()}
+            <span className="ml-1 text-lg sm:text-xl font-normal text-muted-foreground">{plan.duration}</span>
           </div>
-        </section>
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-muted-foreground">{plan.description}</p>
+        </div>
+        <div className="flex flex-1 flex-col justify-between p-4 sm:p-6">
+          <ul className="space-y-3 sm:space-y-4">
+            {plan.features.map((feature, featureIndex) => (
+              <li key={featureIndex} className="flex items-start text-sm sm:text-base">
+                <Check className="mr-2 h-4 w-4 sm:h-5 sm:w-5 text-primary shrink-0" />
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+          <Button className="mt-6 sm:mt-8 w-full">{plan.buttonText}</Button>
+        </div>
+      </motion.div>
+    ))}
+  </div>
+</section>
 
         <Separator className="my-12" />
 
